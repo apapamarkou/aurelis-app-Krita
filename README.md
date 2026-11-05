@@ -1,24 +1,40 @@
-[![Release](https://img.shields.io/github/v/release/aurelis-packages/aurelis-app-Krita?label=release)](https://github.com/aurelis-packages/aurelis-app-Krita/releases/latest)
-[![Version](https://img.shields.io/badge/version-latest-blue)](https://github.com/aurelis-packages/aurelis-app-Krita/releases/latest)
-[![Architecture](https://img.shields.io/badge/arch-x86__64-green)](https://github.com/aurelis-packages/aurelis-app-Krita/releases/latest)
-[![License](https://img.shields.io/github/license/aurelis-packages/aurelis-app-Krita)](LICENSE)
+<div align="center">
+
+# Krita-AppImage-Enhanced 🐧
+
+[![GitHub Downloads](https://img.shields.io/github/downloads/pkgforge-dev/Krita-AppImage-Enhanced/total?logo=github&label=GitHub%20Downloads)](https://github.com/pkgforge-dev/Krita-AppImage-Enhanced/releases/latest)
+[![CI Build Status](https://github.com/pkgforge-dev/Krita-AppImage-Enhanced/actions/workflows/appimage.yml/badge.svg)](https://github.com/pkgforge-dev/Krita-AppImage-Enhanced/releases/latest)
+[![Latest Stable Release](https://img.shields.io/github/v/release/pkgforge-dev/Krita-AppImage-Enhanced)](https://github.com/pkgforge-dev/Krita-AppImage-Enhanced/releases/latest)
+
+<p align="center">
+  <img src="https://invent.kde.org/graphics/krita/-/raw/master/pics/krita-base.svg?ref_type=heads" width="128" />
+</p>
+
+
+| Latest Stable Release | Upstream URL |
+| :---: | :---: |
+| [Click here](https://github.com/pkgforge-dev/Krita-AppImage-Enhanced/releases/latest) | [Click here](https://invent.kde.org/graphics/krita) |
+
+</div>
 
 ---
 
-## Aurelis Krita AppImage Builder
+AppImage made using [quick-sharun](https://github.com/pkgforge-dev/Anylinux-AppImages/blob/main/useful-tools/quick-sharun.sh), which makes it extremely easy to turn any binary into a portable package reliably without using containers or similar tricks. 
 
-This repository contains the build scripts and GitHub Actions workflow to create a portable **Krita** AppImage for Linux. The build process uses [quick-sharun](https://github.com/pkgforge-dev/Anylinux-AppImages/blob/main/useful-tools/quick-sharun.sh) to bundle Krita and all its dependencies into a single, self-contained AppImage that runs on any Linux distribution without requiring FUSE or system-level installation.
+**This AppImage bundles everything and it should work on any Linux distro, including old and musl-based ones.**
 
-### Features
-- **Fully portable** — runs on any Linux distribution (glibc, musl, old and new)
-- **No FUSE required** — uses [uruntime](https://github.com/VHSgunzo/uruntime) for extraction-free execution
-- **Self-contained** — bundles all libraries, plugins, and assets
-- **Automated builds** — GitHub Actions workflow builds on every push to `main`
+This AppImage doesn't require FUSE to run at all, thanks to the [uruntime](https://github.com/VHSgunzo/uruntime).
+
+This AppImage is also supplied with a self-updater by default, so any updates to this application won't be missed, you will be prompted for permission to check for updates and if agreed you will then be notified when a new update is available.
+
+Self-updater is disabled by default if AppImage managers like [am](https://github.com/ivan-hc/AM), [soar](https://github.com/pkgforge/soar) or [dbin](https://github.com/xplshn/dbin) exist, which manage AppImage updates.
+
+<details>
+  <summary><b><i>raison d'être</i></b></summary>
+    <img src="https://github.com/user-attachments/assets/d40067a6-37d2-4784-927c-2c7f7cc6104b" alt="Inspiration Image">
+  </a>
+</details>
 
 ---
 
-This is an **Aurelis Linux package**, but the resulting AppImage can also run as a regular AppImage on any Linux distribution.
-
----
-
-Thanx to: [AnyLinux-AppImages](https://pkgforge-dev.github.io/Anylinux-AppImages/)"s
+More at: [AnyLinux-AppImages](https://pkgforge-dev.github.io/Anylinux-AppImages/)
