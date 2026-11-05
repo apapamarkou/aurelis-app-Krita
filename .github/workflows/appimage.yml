@@ -1,4 +1,4 @@
-name: Aurelis-Application-Build
+name: Anylinux-AppImage
 concurrency:
   group: build-${{ github.ref }}
   cancel-in-progress: true
@@ -16,7 +16,7 @@ jobs:
         include:
           - { runs-on: ubuntu-latest, name: Build AppImage, arch: x86_64 }
           # comment out this line if aarch64 is not wanted
-          # - { runs-on: ubuntu-24.04-arm, name: Build AppImage, arch: aarch64 }
+          - { runs-on: ubuntu-24.04-arm, name: Build AppImage, arch: aarch64 }
     container: ghcr.io/pkgforge-dev/archlinux:latest
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -75,4 +75,3 @@ jobs:
           merge-multiple: true
       - name: Release AppImage
         uses: pkgforge-dev/make-stable-appimage-release@4ed3d48ccb065352b6e6c0db6d39885b201c54a0 #v1.1
-
