@@ -25,7 +25,9 @@ quick-sharun /usr/bin/krita* \
   /usr/lib/libproxy/libpxbackend-1.0.so
 
 # Turn AppDir into AppImage
-quick-sharun --make-appimage
+GITHUB_REPOSITORY= quick-sharun --make-appimage
+rm -f ./dist/*.zsync
+sh ./pkg-meta.sh
 
 # Test the app for 12 seconds, if the test fails due to the app
 # having issues running in the CI use --simple-test instead
